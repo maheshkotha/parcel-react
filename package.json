@@ -1,11 +1,14 @@
 {
+  "homepage": "https://maheshkotha.github.io/parcel-react",
   "name": "parcel-react",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --public-url ./",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -16,8 +19,8 @@
   "bugs": {
     "url": "https://github.com/maheshkotha/parcel-react/issues"
   },
-  "homepage": "https://github.com/maheshkotha/parcel-react#readme",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   },
